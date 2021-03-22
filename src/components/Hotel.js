@@ -28,9 +28,9 @@ export default function Hotel({ hotel }) {
                 setShowSubscription(true);
               }}
             >
-              Request more info about {hotel.name}
+              Request more info
             </button>
-            {showSubscription && <Subscription />}
+            {showSubscription && <Subscription hotel={hotel} setShowSubscription={setShowSubscription} />}
           </div>
         </div>
       )}
