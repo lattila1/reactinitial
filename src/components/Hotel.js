@@ -17,7 +17,12 @@ export default function Hotel({ hotel }) {
       </h2>
       {showDetails && (
         <div>
-          {hotel.city} ({hotel.stars})
+          <div>
+            {hotel.city} ({hotel.stars})
+          </div>
+          <div>
+            <button>Request more info about {hotel.name}</button>
+          </div>
         </div>
       )}
     </>
