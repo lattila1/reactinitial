@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Subscription from "./Subscription";
 
 export default function Hotel({ hotel }) {
   const [showDetails, setShowDetails] = useState(false);
+  const [showSubscription, setShowSubscription] = useState(false);
 
   return (
     <>
@@ -21,7 +23,14 @@ export default function Hotel({ hotel }) {
             {hotel.city} ({hotel.stars})
           </div>
           <div>
-            <button>Request more info about {hotel.name}</button>
+            <button
+              onClick={() => {
+                setShowSubscription(true);
+              }}
+            >
+              Request more info about {hotel.name}
+            </button>
+            {showSubscription && <Subscription />}
           </div>
         </div>
       )}
